@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1>Registration Form</h1>
+    <p>Please provide the  information required:</p>
+    <form method="post" action='https://register-demo.freecodecamp.org'>
+      <fieldset>
+        <label for="first-name">First Name: <input id="first-name" name="first-name" type="text" required /></label>
+        <label for="last-name">Last Name: <input id="last-name" name="last-name" type="text" required /></label>
+        <label for="email">Email: <input id="email" name="email" type="email" required /></label>
+        <label for="new-password">Password: <input id="password" name="password" type="password" pattern="[a-z0-5]{8,}" required /></label>
+      </fieldset>
+      <fieldset>
+        <legend>Experience level (required)</legend>
+        <label for="experienced"><input id="experienced" type="radio" name="experience-level" class="inline" checked /> Experienced </label>
+        <label for="newbie"><input id="newbie" type="radio" name="experience-level" class="inline" /> Newbie</label>
+      </fieldset>
+      <fieldset>
+        <label for="pass-picture">Pass picture: <input id="pass-picture" type="file" name="file" /></label>
+        <label for="age">Age: <input id="age" type="number" name="age" min="18" max="99" /></label>
+        <label for="role">Who will you be attending the event as?
+          <select id="role" name="role">
+            <option value="">(select one)</option>
+            <option value="1">Volunteer</option>
+            <option value="2">Lecturer</option>
+            <option value="3">Listener</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+        <label for="reason">Why are you interested in this event?
+          <textarea id="reason" name="reason" rows="3" cols="30" placeholder="I am interested in attending lectures because..."></textarea>
+        </label>
+      </fieldset>
+      <label for="attendance">
+        <input class="inline" id="attendance" type="checkbox" required name="attendance" /> I have reviwed the <a href="https://www.lecturesplan.com">lectures schedule </a> and will be present at the event.
+      </label>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
